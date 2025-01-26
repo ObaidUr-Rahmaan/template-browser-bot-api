@@ -28,25 +28,21 @@ pnpm run dev
 
 ## Deployment
 
-This project is optimized for Railway deployment:
+This project is optimized for Render deployment:
 
-1. Click the Deploy button below:
+1. Fork this repository
+2. Create a new Web Service on Render
+3. Connect your forked repository
+4. Set your environment variables in Render dashboard
+5. Deploy!
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/YOUR_TEMPLATE_HERE)
+### Why Render?
 
-2. Set your environment variables in Railway dashboard
-3. That's it! Railway handles everything else
-
-Note: Railway's free tier includes $5 credit monthly which is plenty for development/testing.
-
-### Why Not Vercel?
-
-While Vercel is great for many applications, it's not suitable for browser automation due to:
-- Hobby tier: 30s execution limit
-- Pro tier: 60s execution limit
-- Enterprise tier: 900s (15 min) limit
-
-Browser automation often requires longer execution times. Railway has no execution time limits, making it ideal for this use case.
+Render is ideal for browser automation because:
+- 100-minute request timeout limit (1h40m)
+- Automatic HTTPS
+- Zero-downtime deploys
+- Built-in auto-scaling
 
 ## Project Structure
 
@@ -58,7 +54,7 @@ Browser automation often requires longer execution times. Railway has no executi
 ├── .env.example          # Example environment variables
 ├── package.json         # Project dependencies
 ├── tsconfig.json       # TypeScript configuration
-└── railway.toml       # Railway deployment configuration
+└── render.yaml        # Render deployment configuration
 ```
 
 ## API Endpoints
@@ -69,9 +65,9 @@ Runs the browser automation demo and returns the extracted data.
 
 ## Important Notes
 
-This app uses browser automation in a serverless environment. Consider:
+This app uses browser automation in a server environment. Consider:
 
 1. **Cold Starts**: First request might be slower due to browser initialization
-2. **Execution Limits**: Vercel has a 10s timeout for hobby plans
-3. **Memory Usage**: Browser automation can be memory intensive
-4. **Scaling**: Vercel will automatically scale based on demand
+2. **Memory Usage**: Browser automation can be memory intensive
+3. **Request Timeouts**: Render has a 100-minute (1h40m) timeout limit per request
+4. **Scaling**: Render automatically scales instances based on demand
