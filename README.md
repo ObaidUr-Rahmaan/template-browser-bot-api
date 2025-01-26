@@ -93,11 +93,6 @@ Render is ideal for browser automation because:
 
 Runs the browser automation demo and returns the extracted data.
 
-## Important Notes
+## ToDos
 
-This app uses browser automation in a server environment. Consider:
-
-1. **Cold Starts**: First request might be slower due to browser initialization
-2. **Memory Usage**: Browser automation can be memory intensive
-3. **Request Timeouts**: Render has a 100-minute (1h40m) timeout limit per request
-4. **Scaling**: Render automatically scales instances based on demand
+- [ ] Add an option to [deploy to cloudflare](https://docs.browserbase.com/integrations/cloudflare/typescript#add-web-browsing-capabilities-to-cloudflare-workers) (with puppeteer, since playwright is not supported on cloudflare workers)
