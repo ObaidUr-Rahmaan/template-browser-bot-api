@@ -1,6 +1,6 @@
 # Template Browser Automation Agent
 
-A template browser automation service built with Express.js and Stagehand.
+A template browser automation service built with ExpressJS and Stagehand.
 
 Create your own browser agent to crawl the web, extract data, and perform actions on your behalf.
 
