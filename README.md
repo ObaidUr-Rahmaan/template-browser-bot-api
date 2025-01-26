@@ -43,6 +43,7 @@ Render is ideal for browser automation because:
 - Automatic HTTPS
 - Zero-downtime deploys
 - Built-in auto-scaling
+- DDoS protection
 
 ## Project Structure
 
